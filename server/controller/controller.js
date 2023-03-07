@@ -1,6 +1,6 @@
 var Userdb = require('../model/model');
 
-// create and save new user
+// create and save new product
 exports.create = (req,res)=>{
     // validate request
     if(!req.body){
@@ -8,7 +8,7 @@ exports.create = (req,res)=>{
         return;
     }
 
-    // new user
+    // new product
     const user = new Userdb({
         name : req.body.name,
         category : req.body.category,
@@ -17,7 +17,7 @@ exports.create = (req,res)=>{
         status : req.body.status
     })
 
-    // save user in the database
+    // save product in the database
     user
         .save(user)
         .then(data => {
@@ -29,10 +29,9 @@ exports.create = (req,res)=>{
                 message : err.message || "Some error occurred while creating a create operation"
             });
         });
-
 }
 
-// retrieve and return all users/ retrive and return a single user
+// retrieve and return all products/ retrive and return a single product
 exports.find = (req, res)=>{
 
     if(req.query.id){
@@ -63,7 +62,7 @@ exports.find = (req, res)=>{
     
 }
 
-// Update a new idetified user by user id
+// Update a new idetified product by product id
 exports.update = (req, res)=>{
     if(!req.body){
         return res
@@ -85,7 +84,7 @@ exports.update = (req, res)=>{
         })
 }
 
-// Delete a user with specified user id in the request
+// Delete a product with specified product id in the request
 exports.delete = (req, res)=>{
     const id = req.params.id;
 

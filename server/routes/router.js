@@ -11,13 +11,13 @@ const controller = require('../controller/controller');
 route.get('/', services.homeRoutes);
 
 /**
- *  @description add users
+ *  @description add product
  *  @method GET /add-user
  */
 route.get('/add-user', services.add_user)
 
 /**
- *  @description for update user
+ *  @description for update product
  *  @method GET /update-user
  */
 route.get('/update-user', services.update_user)
