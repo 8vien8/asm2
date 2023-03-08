@@ -8,12 +8,10 @@ var schema = new mongoose.Schema({
     category : {
         type: String,
         required: true,
-        unique: true
     },
     price : {
         type: String,
         required: true,
-        unique: true
     },
     ages : String,
     status : String

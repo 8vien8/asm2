@@ -10,8 +10,6 @@ exports.homeRoutes = (req, res) => {
         .catch(err =>{
             res.send(err);
         })
-
-    
 }
 
 exports.add_user = (req, res) =>{
